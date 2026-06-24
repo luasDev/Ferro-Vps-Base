@@ -1,0 +1,14 @@
+[package]
+name = "ferro-gpu"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Virtual graphics device, two-dimensional rasterizer, and framebuffer for Ferro-VPS."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-bus = { workspace = true }
+ferro-mem = { workspace = true }

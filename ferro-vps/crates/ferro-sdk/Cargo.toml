@@ -1,0 +1,13 @@
+[package]
+name = "ferro-sdk"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Software development kit for two-dimensional games and servers running inside the guest."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-isa = { workspace = true }

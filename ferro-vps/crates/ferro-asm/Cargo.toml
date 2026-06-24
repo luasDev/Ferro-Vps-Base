@@ -1,0 +1,13 @@
+[package]
+name = "ferro-asm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Assembler, bytecode format, and program loader for Ferro-VPS."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-isa = { workspace = true }

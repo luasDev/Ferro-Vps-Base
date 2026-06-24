@@ -1,0 +1,17 @@
+[package]
+name = "ferro-kernel"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Guest kernel (scheduler, system calls, application binary interface) for Ferro-VPS."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-cpu = { workspace = true }
+ferro-mem = { workspace = true }
+ferro-bus = { workspace = true }
+ferro-storage = { workspace = true }
+ferro-net = { workspace = true }

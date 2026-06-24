@@ -1,0 +1,19 @@
+[package]
+name = "ferro-mem"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Virtual memory and memory management unit for Ferro-VPS."
+
+[features]
+# Forwards to `ferro-common/trace-logs` so that `log_trace!` (used for
+# unaligned-access tracing) can be compiled into release builds when desired.
+# In debug builds trace logging is always active regardless of this feature.
+trace-logs = ["ferro-common/trace-logs"]
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-isa = { workspace = true }

@@ -1,0 +1,21 @@
+[package]
+name = "ferro-vm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Assembly and integration of the complete Ferro-VPS virtual machine."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-isa = { workspace = true }
+ferro-cpu = { workspace = true }
+ferro-mem = { workspace = true }
+ferro-bus = { workspace = true }
+ferro-gpu = { workspace = true }
+ferro-storage = { workspace = true }
+ferro-audio = { workspace = true }
+ferro-net = { workspace = true }
+ferro-kernel = { workspace = true }

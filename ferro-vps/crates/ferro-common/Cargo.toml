@@ -1,0 +1,15 @@
+[package]
+name = "ferro-common"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Shared types, errors, logging, and configuration for Ferro-VPS."
+
+[features]
+# When enabled, `log_trace!` is compiled into release builds. It is always
+# active in debug builds regardless of this feature. Disabled by default so the
+# most verbose tracing costs zero in production binaries.
+trace-logs = []

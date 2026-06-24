@@ -1,0 +1,13 @@
+[package]
+name = "ferro-host"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Native host process (window, input, framebuffer display) for Ferro-VPS."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-vm = { workspace = true }

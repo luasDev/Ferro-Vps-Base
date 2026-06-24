@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "xtask"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+license = "MIT"
+authors = ["Ferro-VPS Contributors"]
+repository = "https://example.com/ferro-vps"
+
+# Centralized versions for ALL internal crates. External runtime dependencies
+# are intentionally empty in Part 1 (the crates are stubs). New external
+# dependencies must be added here and recorded in docs/DEPENDENCIES.md.
+[workspace.dependencies]
+ferro-common = { path = "crates/ferro-common" }
+ferro-isa = { path = "crates/ferro-isa" }
+ferro-mem = { path = "crates/ferro-mem" }
+ferro-bus = { path = "crates/ferro-bus" }
+ferro-cpu = { path = "crates/ferro-cpu" }
+ferro-gpu = { path = "crates/ferro-gpu" }
+ferro-storage = { path = "crates/ferro-storage" }
+ferro-audio = { path = "crates/ferro-audio" }
+ferro-net = { path = "crates/ferro-net" }
+ferro-kernel = { path = "crates/ferro-kernel" }
+ferro-vm = { path = "crates/ferro-vm" }
+ferro-asm = { path = "crates/ferro-asm" }
+ferro-sdk = { path = "crates/ferro-sdk" }
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"

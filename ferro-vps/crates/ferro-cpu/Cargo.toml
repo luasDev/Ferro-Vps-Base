@@ -1,0 +1,20 @@
+[package]
+name = "ferro-cpu"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Virtual processor for Ferro-VPS."
+
+[dependencies]
+ferro-common = { workspace = true }
+ferro-isa = { workspace = true }
+ferro-mem = { workspace = true }
+ferro-bus = { workspace = true }
+
+[features]
+# Forwards to `ferro-common/trace-logs` so that `log_trace!` (compiled out in
+# release builds by default) can be force-enabled for diagnostic CPU tracing.
+trace-logs = ["ferro-common/trace-logs"]
